@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Trust Business Five Sarl</title>
+</head>
+
+<body>
+    <div id="home" class="navbar">
+            <a class="logo" href="index.html"><img class="logo" src="/static/images/logo/LOGO PNG TRUST.png" alt=""></a>
+            <ul class="nav d-none d-lg-flex">
+                <li><a href="Index.html">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#Missions">Missions</a></li>
+                <li><a href="Programme/Programmes.html">Programmes</a></li>
+                <li class="dropdown">
+                    <a href="#">Domaines d'expertise</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#Environnement.html">Environnement</a></li>
+                        <li><a href="#Reboisement&GF.html">Reboisement et gestion des forêts</a></li>
+                        <li><a href="#Agriculture.html">Agriculture</a></li>
+                        <li><a href="#Infrastructure.html">Infrastructure</a></li>
+                        <li><a href="#Economie.html">Economie</a></li>
+                        <li><a href="#Urgence&GF.html">Urgence et gestion des conflits</a></li>
+                    </ul>
+                </li>
+                <li><a href="OffresBox/Offres.html">Offres</a></li>
+                <li><a href="Projets/Projets.html">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="d-flex align-items-center flex-column d-lg-none">
+                <small><b>MENU</b></small>
+                <i class="bi bi-arrow-down-short"></i>
+            </div>
+            <div>
+                <input type="search" placeholder="Rechercher"><a class="sear" href="#"><i class="bi bi-search"></i></a>
+            </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="custom-alert" id="customAlert">
+        <h2>Notification</h2>
+        <hr>
+        <p id="alertMessage"></p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+
+    <section class="accueil" style="background-image: url('/static/images/H.jpg')">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center mt-5">
+                <img class="logo animate" src="/static/images/TB5.jpg" alt="">
+                <div class="text slideIn mt-3">
+                    <h4>
+                        Promouvoir un développement durable et inclusif à travers des <br>
+                        initiatives entrepreneuriales et des partenariats
+                    </h4> <br>
+                    <a href="#contact">Contactez-nous</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h1>Qui sommes nous ?</h1>
+            <div class="content">
+                <div class="aboutus">
+                    <h4>Trust Business Five Sarl</h4>
+                    <p class="H-Icone"><i class="bi bi-buildings"></i></p>
+                    <p>
+                        Trust Business Five est une société <br> 
+                        à responsabilité limitée qui a été créé le 19 <br> 
+                        octobre 2018 pour pallier aux insuffisances <br>
+                        d'offres des services de qualité en <br>
+                        République Démocratique du Congo <br>
+                        et à l'étranger.
+                    </p>
+                    <a href="#">En savoir plus</a>
+                </div>
+                <div class="ouradress">
+                    <h4>Notre adresse</h4>
+                    <p class="H-Icone"><i class="bi bi-house-fill"></i></p>
+                    <p>
+                        Avenue de la Clinique, N¨13 <br>
+                        Quartier Batetela, Commune de la Gombe <br>
+                        <span>E-mail : infos@tbf.org</span>  
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission" id="Missions">
+        <div class="container">
+            <h1>Notre mission</h1>
+            <p>
+                Notre mission est de promouvoir un développement durable et inclusif à travers des initiatives <br>
+                entrepreneuriales et des partenariats stratégiques dans des domaines clés tels que : 
+            </p>
+            <div class="content">
+                <div class="row m-0 contenu">
+                    <div class="col-4">
+                        <div class="item">
+                            <img src="/static/images/J.jpg" alt="">
+                            <h5>La santé Publique</h5>
+                            <P style="color: #000; font-size: 15px; text-align: left;">
+                                Nos projets visent à améliorer la santé des communautés <br>
+                                tout en protégeant l'environnement.
+                            </P>
+                            <a href="#">En savoir plus</a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="item">
+                            <img src="/static/images/K.jpg" alt="">
+                            <h5>Le reboisement</h5>
+                            <P style="color: #000; font-size: 15px; text-align: left;">
+                                Nous collaborons avec des organisations locales et 
+                                internationales pour restaurer les écosystèmes 
+                                forestiers.
+                            </P>
+                            <a href="#">En savoir plus</a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="item">
+                            <img src="/static/images/I.jpg" alt="">
+                            <h5>L'agriculture</h5>
+                            <P style="color: #000; font-size: 15px; text-align: left;">
+                                Nous aidons à transformer les pratiques agricoles grâce 
+                                à des méthodes innovantes et écologiques.
+                            </P>
+                            <a href="#">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contenu">
+                    <div>
+                        <img src="/static/images/G.jpg" alt="">
+                        <h4>les infrastructures</h4>
+                        <P style="color: #000; font-size: 15px; text-align: left;">
+                            Nous soutenons le développement d'infrastructures durables.
+                        </P>
+                        <a href="#">En savoir plus</a>
+                    </div>
+                    <div>
+                        <img src="/static/images/M.jpg" alt="">
+                        <h4>L'économie</h4>
+                        <P style="color: #000; font-size: 15px; text-align: left;">
+                            Nos projets visent à améliorer la santé des communautés <br>
+                            tout en protégeant l'environnement.
+                        </P>
+                        <a href="#">En savoir plus</a>
+                    </div>
+                    <div>
+                        <img src="/static/images/B.jpg" alt="">
+                        <h4>La gestion des urgences</h4>
+                        <P style="color: #000; font-size: 15px; text-align: left;">
+                            Nous offrons des solutions rapides et efficaces pour gérer 
+                            les crises humanitaires et environnementales.
+                        </P>
+                        <a href="#">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Dirigeans">
+        <div class="container" style="padding: 20px 0;">
+            <h1 style="text-align: center;">L'équipe dirigeante</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="content" style="background-color: #f3f3f3; padding: 20px; text-align: center; border-radius: 10px;">
+                        <p style="text-align: center; font-size: 150px;"><i class="bi bi-person-circle"></i></p>
+                        <h5>KABONGO KALONJI ATHYS</h5>
+                        <h6>Coordonateur National</h6>
+                        <p>
+                            Tél : (+243) 818 283 481
+                        </p>
+                        <p>
+                            Suivre en ligne : 
+                            <ul style="display: flex; margin-left: 205px;">
+                                <li style="margin-right: 20px; list-style: none;"><a href="#" style="color: #2e7d32;"><i class="bi bi-facebook"></i></a></li>
+                                <li style="margin-right: 20px; list-style: none;"><a href="#" style="color: #2e7d32;"><i class="bi bi-twitter"></i></a></li>
+                                <li style="margin-right: 20px; list-style: none;"><a href="#" style="color: #2e7d32;"><i class="bi bi-linkedin"></i></a></li>
+                                <li style="margin-right: 20px; list-style: none;"><a href="#" style="color: #2e7d32;"><i class="bi bi-instagram"></i></a></li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content" style="background-color: #f3f3f3; padding: 20px; text-align: center; border-radius: 10px;">
+                        <p style="text-align: center; font-size: 150px;"><i class="bi bi-person-circle"></i></p>
+                        <h5>MUKENDI MUKENDI GIRESSE</h5>
+                        <h6>Directeur Général</h6>
+                        <p>
+                            Tél : (+243) 974 144 391
+                        </p>
+                        <p>
+                            Suivre en ligne : 
+                            <ul style="display: flex; margin-left: 205px;">
+                                <li style="margin-right: 20px; list-style: none;"><a href="#" style="color: #2e7d32;"><i class="bi bi-facebook"></i></a></li>
+                                <li style="margin-right: 20px; list-style: none;"><a href="#" style="color: #2e7d32;"><i class="bi bi-twitter"></i></a></li>
+                                <li style="margin-right: 20px; list-style: none;"><a href="#" style="color: #2e7d32;"><i class="bi bi-linkedin"></i></a></li>
+                                <li style="margin-right: 20px; list-style: none;"><a href="#" style="color: #2e7d32;"><i class="bi bi-instagram"></i></a></li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact py-5" id="contact">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <div class="row">
+                <div class="infos col-12">
+                    <p>
+                        <i class="bi bi-house-fill"></i> <br>
+                        Avenue de la Clinique, N¨13 <br>
+                        Quartier Batetela, Commune de la Gombe <br>
+                    </p>
+                    <p>
+                        <i class="bi bi-envelope-fill" style="color: #2e7d32;"></i> <br>
+                        E-mail : infostbf@gmail.com
+                    </p>
+                    <p>
+                        <i class="bi bi-telephone-fill"></i> <br>
+                        +243 81 838 20 27/+243 90 444 20 72
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="sending">
+                        <h3>Envoyez-nous un message</h3>
+                        <form action="" id="myForm">
+                            <input type="text" name="name" id="name" placeholder="Nom">
+                            <input type="email" name="email" id="email" placeholder="email">
+                            <textarea name="message" id="message" placeholder="Message"></textarea>
+                            <button type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="msg">
+                        <h3>Commentaires de nos followers</h3>
+                        <div class="comment">
+                            <div class="contImg">
+                                <img src="/static/images/ruben.jpg" alt="" style="width: 100px; object-fit: cover;">
+                            </div>
+                            <div>
+                                <h5>Ruben Kayamabla</h5>
+                                <p>
+                                    Travailler avec Trust Business Five a complètement transformé <br>
+                                    notre approche du reboisement. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="contImg">
+                                <img src="/static/images/medi.jpg" alt="" style="width: 100px; object-fit: cover;">
+                            </div>
+                            <div>
+                                <h5>Medi Kingura</h5>
+                                <p>
+                                    La collaboration avec Trust Business Five dans le cadre de la <br>
+                                    gestion des urgences a été exemplaire. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="voil">
+            <h4>Nos partenairs</h4>
+            <div>
+                <img src="/static/images/logo/LOGO (2).png" alt="" style="width: 110px;">
+                <img src="/static/images/logo/logo_get_skills_class.png" alt="" style="width: 110px;">
+            </div>
+            <div>
+                <img src="/static/images/logo/LOGO-ENVIRONNEMENT-DEV-e1651049635425.png" alt="" style="width: 110px;">
+                <img src="/static/images/logo/LOGO (2).png" alt="" style="width: 110px;">
+            </div>
+            <div>
+                <img src="/static/images/logo/brave man ok_104331.png" alt="" style="width: 110px;">
+                <img src="/static/images/logo/ECO.png" alt="" style="width: 110px;">
+            </div>
+        </div>
+    </section>
+
+    <section class="prefooter py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 services">
+                    <h3 style="color: #fff;">Services et activités</h3>
+                    <div>
+                        <ul>
+                            <li>Bureau d'études</li>
+                            <li>Facilitation d'affaires</li>
+                            <li>
+                                Appui conseil dans la coordination 
+                                des activités de gestion de 
+                                l'environnement, reboisement, gestion 
+                                des forêts et assainissement
+                            </li>
+                            <li>Construction et réhabilitation (Génie civil)</li>
+                            <li>Informatique/innovation en nouvelle technologie Commerces générales</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 partenairs">
+                    <div></div>
+                </div>
+                <div class="col-lg-4 bref">
+                    <h3 style="color: #fff;">Trust Business Five</h3>
+                    <p>
+                        Trust Business Five est une société à responsabilité 
+                        limitée qui a été créé pour pallier aux insuffisances 
+                        d'offres des services de qualité en République 
+                        Démocratique du Congo et à l'étranger.
+                    </p>
+                    <a href="#">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="menu-list">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Projets</a></li>
+                <li class="dropdown">
+                    <a href="#">Domaines d'expertise</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Environnement</a></li>
+                        <li><a href="#">Reboisement et gestion des forêts</a></li>
+                        <li><a href="#">Agriculture</a></li>
+                        <li><a href="#">Infrastructure</a></li>
+                        <li><a href="#">Economie</a></li>
+                        <li><a href="#">Santé</a></li>
+                        <li><a href="#">Urgence et gestion des conflits</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Missions">Missions</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <hr>
+            <div class="content">
+                <img src="/static/images/TB5.jpg" alt="">
+                <div class="partainers">
+                    <p><i class="bi bi-universal-access"></i></p>
+                    <p><i class="bi bi-x-diamond-fill"></i></p>
+                    <p><i class="bi bi-yin-yang"></i></p>
+                    <p><i class="bi bi-windows"></i></p>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/people/Trust-Business-Five/61566912243431/?rdid=rcQJ3lrhWXJltUVv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14rrLd1fRr%2F"><i class="bi bi-facebook" style="font-size: 35px; color: rgb(0, 89, 255);"></i></a>
+                    <a href="https://x.com/trust_business5"><img src="/static/images/logo/twitter.png" alt="" style="width: 35px;"></a>
+                    <a href="https://www.linkedin.com/company/trust-business-five"><i class="bi bi-linkedin" style="font-size: 35px; color: rgb(0, 89, 255);"></i></a>
+                    <a href="https://www.youtube.com/@TrustBusinessFive"><i class="bi bi-youtube" style="font-size: 35px; color: red;"></i></a>
+                </div>
+            </div>
+            <hr>
+            <p class="TDR">&copy; 2024 TRUST BUSINESS FIVE Sarl. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" class="btn btn-primary">&uparrow;</button>
+
+    <script>
+        let mybutton = document.getElementById("myBtn");
+
+        //Afficher le bouton retour en haut
+        window.onscroll = function(){scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // Lorsque l'utilisateur clique sur le bouton, retour en haut
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Vérification du remplissage des champs et affichage de la boîte de dialogue
+        let formToSubmit = null;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Empêche l'envoi du formulaire
+
+                let form = event.target;
+                let allFilled = true;
+                let fields = form.querySelectorAll('input[type="text"], input[type="email"]');
+
+                fields.forEach(function(field) {
+                    if (!field.value) {
+                        allFilled = false;
+                        field.style.borderColor = 'red'; // Met en évidence les champs non remplis
+                    } else {
+                        field.style.borderColor = ''; // Réinitialise la bordure si le champ est rempli
+                    }
+                });
+
+                if (allFilled) {
+                    formToSubmit = form;
+                    showAlert('L\'équipe de Trust Business Five vous remercie pour votre message, \n nous restons ouvert pour toute vos préoccupation. \n Cliquez sur OK pour quitter');
+                } else {
+                    showAlert('Veuillez remplir tous les champs.');
+                }
+            });
+        });
+
+        function showAlert(message) {
+            document.getElementById('alertMessage').innerText = message;
+            document.getElementById('customAlert').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeAlert() {
+            document.getElementById('customAlert').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+            if (formToSubmit) {
+                formToSubmit.submit(); // Soumet le formulaire après la fermeture de l'alerte
+                formToSubmit = null;
+            }
+        }
+    </script>
+</body>
+</html>
