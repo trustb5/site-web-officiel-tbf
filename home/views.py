@@ -4,14 +4,34 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from .models import Mission
 
-class GeeksCreate(CreateView):
-    model = Mission
-    fields = ['title', 'description']
 
-class GeeksList(ListView):
+def Home(request):
+    template_name = 'home/index.html'
+    return render(request, template_name)
 
-    # specify the model for list view
+def Programme(request):
+    template_name = 'home/programme.html'
+    return render(request, template_name)
+
+def Offres(request):
+    template_name = 'home/offres.html'
+    return render(request, template_name)
+
+def Ecoplus(request):
+    template_name = 'home/ecoplus.html'
+    return render(request, template_name)
+
+def Dashboard(request):
+    template_name = 'admin/admin.html'
+    return render(request, template_name)
+
+class addMission(CreateView):
     model = Mission
+    template_name = 'admin/addMission.html'
+    fields = ['title', 'image', 'desc']
+
+class DashboardView(ListView):
+    template_name = 'admin/admin.html'
 
 class GeeksDetailView(DetailView):
     # specify the model to use
@@ -40,8 +60,3 @@ class GeeksDeleteView(DeleteView):
     # url to redirect after successfully
     # deleting object
     success_url ="/"
-
-def Home(request):
-    template_name = 'home/index.html'
-    return render(request, template_name)
-

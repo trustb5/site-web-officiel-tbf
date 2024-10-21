@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/css/stl.css">
+    <title>Trust Business Five Sarl</title>
+</head>
+
+<body>
+    <div id="home" class="navbar">
+        <div class="d-flex align-items-center flex-column d-lg-none">
+            <img src="/static/images/menu.png" onclick="showMenu()" alt="menu-bar" style="width: 30px; cursor: pointer;">
+        </div>
+        <a class="logo" href="{% url 'home:home' %}"><img class="logo" src="/static/images/logo/LOGO PNG TRUST.png" alt=""></a>
+        <ul class="nav d-none d-lg-flex">
+            <li><a href="{% url 'home:home' %}">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#Missions">Missions</a></li>
+            <li class="dropdown">
+                <a href="#">Domaines d'expertise</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#Environnement.html">Environnement</a></li>
+                    <li><a href="#Reboisement&GF.html">Reboisement et gestion des forêts</a></li>
+                    <li><a href="#Agriculture.html">Agriculture</a></li>
+                    <li><a href="#Infrastructure.html">Infrastructure</a></li>
+                    <li><a href="#Economie.html">Economie</a></li>
+                    <li><a href="#Urgence&GF.html">Urgence et gestion des conflits</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'home:offres' %}">Offres</a></li>
+            <li><a href="{% url 'home:programme' %}">Programmes</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div>
+            <input type="search" placeholder="Rechercher"><a class="sear" href="#"><i class="bi bi-search"></i></a>
+        </div>
+
+        <!-- Menu responsive -->
+        <div id="menu-responsive" class="menu-responsive hide-menu d-lg-none">
+            <ul class="nav">
+                <div style="position: absolute; right: 10px; top: 10px; padding: 5px; z-index: 999;">
+                    <img src="/static/images/menu.png" alt="menu bar" onclick="showMenu()" style="width: 25px; cursor: pointer;">
+                </div>
+                <li><a href="{% url 'home:home' %}">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#Missions">Missions</a></li>
+                <li class="dropdown">
+                    <a href="#">Domaines d'expertise</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#Environnement.html">Environnement</a></li>
+                        <li><a href="#Reboisement&GF.html">Reboisement et gestion des forêts</a></li>
+                        <li><a href="#Agriculture.html">Agriculture</a></li>
+                        <li><a href="#Infrastructure.html">Infrastructure</a></li>
+                        <li><a href="#Economie.html">Economie</a></li>
+                        <li><a href="#Urgence&GF.html">Urgence et gestion des conflits</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'home:offres' %}">Offres</a></li>
+                <li><a href="{% url 'home:programme' %}">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="custom-alert" id="customAlert">
+        <h2>Notification</h2>
+        <hr>
+        <p id="alertMessage"></p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+
+    {% block content %}{% endblock %}
+
+    <div class="voil">
+        <h4>Nos partenairs</h4>
+        <div>
+            <img src="/static/images/logo/LOGO (2).png" alt="" style="width: 110px;">
+            <img src="/static/images/logo/logo_get_skills_class.png" alt="" style="width: 110px;">
+        </div>
+        <div>
+            <img src="/static/images/logo/LOGO-ENVIRONNEMENT-DEV-e1651049635425.png" alt="" style="width: 110px;">
+            <img src="/static/images/logo/LOGO (2).png" alt="" style="width: 110px;">
+        </div>
+        <div>
+            <img src="/static/images/logo/brave man ok_104331.png" alt="" style="width: 110px;">
+            <img src="/static/images/logo/ECO.png" alt="" style="width: 110px;">
+        </div>
+    </div>
+
+    <section class="prefooter py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 services">
+                    <h4 style="color: #fff;">Services et activités</h3>
+                    <div>
+                        <ul>
+                            <li>Bureau d'études</li>
+                            <li>Facilitation d'affaires</li>
+                            <li>
+                                Appui conseil dans la coordination 
+                                des activités de gestion de 
+                                l'environnement, reboisement, gestion 
+                                des forêts et assainissement
+                            </li>
+                            <li>Construction et réhabilitation (Génie civil)</li>
+                            <li>Informatique/innovation en nouvelle technologie Commerces générales</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 partenairs">
+                    <div></div>
+                </div>
+                <div class="col-lg-4 bref">
+                    <h4 style="color: #fff;">Trust Business Five</h4>
+                    <p>
+                        Trust Business Five est une société à responsabilité 
+                        limitée qui a été créé pour pallier aux insuffisances 
+                        d'offres des services de qualité en République 
+                        Démocratique du Congo et à l'étranger.
+                    </p>
+                    <a href="#">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <ul class="menu-list">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Projets</a></li>
+                <li class="dropdown">
+                    <a href="#">Domaines d'expertise</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Environnement</a></li>
+                        <li><a href="#">Reboisement et gestion des forêts</a></li>
+                        <li><a href="#">Agriculture</a></li>
+                        <li><a href="#">Infrastructure</a></li>
+                        <li><a href="#">Economie</a></li>
+                        <li><a href="#">Santé</a></li>
+                        <li><a href="#">Urgence et gestion des conflits</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Missions">Missions</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <hr>
+            <div class="content">
+                <img src="/static/images/TB5.jpg" alt="">
+                <div class="partainers">
+                    <p><i class="bi bi-universal-access"></i></p>
+                    <p><i class="bi bi-x-diamond-fill"></i></p>
+                    <p><i class="bi bi-yin-yang"></i></p>
+                    <p><i class="bi bi-windows"></i></p>
+                </div>
+                <div class="social">
+                    <a href="https://www.facebook.com/people/Trust-Business-Five/61566912243431/?rdid=rcQJ3lrhWXJltUVv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14rrLd1fRr%2F"><i class="bi bi-facebook" style="color: rgb(0, 89, 255);"></i></a>
+                    <a href="https://x.com/trust_business5"><img src="/static/images/logo/twitter.png" alt="" style="width: 1.1rem; margin-top: -2px;"></a>
+                    <a href="https://www.linkedin.com/company/trust-business-five"><i class="bi bi-linkedin" style="color: rgb(0, 89, 255);"></i></a>
+                    <a href="https://www.youtube.com/@TrustBusinessFive"><i class="bi bi-youtube" style="color: red;"></i></a>
+                </div>
+            </div>
+            <hr>
+            <p class="TDR">&copy; 2024 TRUST BUSINESS FIVE Sarl. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" class="btn btn-primary">&uparrow;</button>
+
+    <script>
+        let menuResp = document.getElementById("menu-responsive");
+
+        function showMenu () {
+            menuResp.classList.toggle('hide-menu')
+            menuResp.classList.toggle('show-menu')
+        }
+
+
+
+
+
+
+
+
+        let mybutton = document.getElementById("myBtn");
+
+        //Afficher le bouton retour en haut
+        window.onscroll = function(){scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // Lorsque l'utilisateur clique sur le bouton, retour en haut
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Vérification du remplissage des champs et affichage de la boîte de dialogue
+        let formToSubmit = null;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Empêche l'envoi du formulaire
+
+                let form = event.target;
+                let allFilled = true;
+                let fields = form.querySelectorAll('input[type="text"], input[type="email"]');
+
+                fields.forEach(function(field) {
+                    if (!field.value) {
+                        allFilled = false;
+                        field.style.borderColor = 'red'; // Met en évidence les champs non remplis
+                    } else {
+                        field.style.borderColor = ''; // Réinitialise la bordure si le champ est rempli
+                    }
+                });
+
+                if (allFilled) {
+                    formToSubmit = form;
+                    showAlert('L\'équipe de Trust Business Five vous remercie pour votre message, \n nous restons ouvert pour toute vos préoccupation. \n Cliquez sur OK pour quitter');
+                } else {
+                    showAlert('Veuillez remplir tous les champs.');
+                }
+            });
+        });
+
+        function showAlert(message) {
+            document.getElementById('alertMessage').innerText = message;
+            document.getElementById('customAlert').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeAlert() {
+            document.getElementById('customAlert').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+            if (formToSubmit) {
+                formToSubmit.submit(); // Soumet le formulaire après la fermeture de l'alerte
+                formToSubmit = null;
+            }
+        }
+    </script>
+</body>
+</html>
