@@ -1,0 +1,24 @@
+{% extends '../home/base.html' %}
+{% block content %}
+
+    <section class="accueil">
+        <div class="container">
+            <h1 class="text-center text-white p-2">Se connecter</h1>
+            <div class="d-flex justify-content-center">
+                <form method="post" style="padding: 20px; border-radius: 10px; background-color: #fff; width: 20rem;">
+                    {% csrf_token %}
+                    <label for="username" class="d-block mb-2">
+                        Nom d'utilisateur
+                        <input type="text" class="form-control w-100" name="username" id="username" required>
+                    </label>
+                    <label for="password" class="d-block mb-2">
+                        Mot de passe
+                        <input type="password" class="form-control w-100" name="password" id="password" required>
+                    </label>
+                    <button type="submit" class="btn btn-success">Connexion</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

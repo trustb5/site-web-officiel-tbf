@@ -1,0 +1,14 @@
+{% extends '../home/base.html' %}
+{% block content %}
+
+    <section class="accueil">
+        <div class="container text-center">
+            <h1 class="text-center text-white p-2">Dashboard</h1>
+            <a href="#" class="btn btn-success mb-2">Gérer les missions</a><br>
+            <a href="#" class="btn btn-success mb-2">Gérer les offres</a><br>
+            <a href="#" class="btn btn-success mb-2">Gérer les programmes</a><br>
+            <a href="{% url 'accounts:logout' %}" class="btn btn-danger mb-2">Déconnection</a><br>
+        </div>
+    </section>
+
+{% endblock %}
