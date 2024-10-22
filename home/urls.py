@@ -9,5 +9,7 @@ urlpatterns = [
     path('offres', views.Offres, name='offres'),
     path('ecoplus', views.Ecoplus, name='ecoplus'),
     path('dashboard/', views.Dashboard, name='dash'),
+
     path('addMission/', views.addMission.as_view(), name='addMission'),
+    path('showMission/', views.showMission, name='showMission'),
 ]

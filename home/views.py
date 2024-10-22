@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -25,10 +26,21 @@ def Dashboard(request):
     template_name = 'admin/admin.html'
     return render(request, template_name)
 
+
 class addMission(CreateView):
     model = Mission
-    template_name = 'admin/addMission.html'
+    template_name = 'dash/missionForm.html'
+    success_url = '/showMission/'
     fields = ['title', 'image', 'desc']
+
+def showMission(request):
+    template_name = 'dash/missions.html'
+    missions = Mission.objects.all()
+    context = {
+        'missions': missions,
+    }
+    return render(request, template_name, context)
+
 
 class DashboardView(ListView):
     template_name = 'admin/admin.html'

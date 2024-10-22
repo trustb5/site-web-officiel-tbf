@@ -1,0 +1,46 @@
+{% extends '../home/base.html' %}
+{% block content %}
+
+    <section class="accueil">
+        <div class="container">
+            <div class="row m-0">
+                {% if missions %}
+                    <div class="d-flex align-items-center mb-2">
+                        <h3 class="text-white">Nos missions</h3> &nbsp;&nbsp;
+                        <a href="{% url 'home:addMission' %}">Ajouter une mission</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" style="border-radius: 10px;">
+                            <thead>
+                                <th>
+                                    <td>Image</td>
+                                    <td>Titre</td>
+                                    <td>Description</td>
+                                    <td>Actions</td>
+                                </th>
+                            </thead>
+                            <tbody>
+                                {% for item in missions %}
+                                <tr>
+                                    <td></td>
+                                    <td><img src="{{item.image.url}}" width="70" height="50" alt="{{item.title}}"></td>
+                                    <td>{{item.title}}</td>
+                                    <td style="min-width: 30rem;">{{item.desc}}</td>
+                                    <td>
+                                        <a href="#" class="btn btn-warning mb-1">Edit</a>
+                                        <a href="#" class="btn btn-danger mb-1">Del</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                <h3 class="text-center mb-3"><i class="text-muted">Aucune donnée pour l'instant</i></h3>
+                <a href="{% url 'home:addMission' %}" class="btn btn-success w-50 mx-auto">Ajouter une mission</a>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
