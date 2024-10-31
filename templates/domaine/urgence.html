@@ -1,0 +1,30 @@
+{% extends '../home/base.html' %}
+{% block content %}
+
+    <section class="domaine">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="whiteBox">
+                        <img src="/static/images/S.jpg" alt="" style="width: 100%; height: 80%;">
+                        <h3>Entrepreneuriat et partenariat dans la gestion des urgences et des conflits</h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="greenBox">
+                        <p>
+                            Nous intervenons également dans les situations d'urgence, 
+                            en fournissant des solutions rapides et efficaces pour la 
+                            gestion des crises humanitaires et environnementales. En 
+                            partenariat avec des organisations humanitaires, nous offrons 
+                            des services de gestion des conflits et des catastrophes afin 
+                            de réduire les impacts sur les communautés vulnérables.
+                        </p>
+                        <a href="{% url 'home:home' %}#contact">Contactez-nous</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}

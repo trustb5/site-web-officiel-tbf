@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/css/stls.css">
+    <link rel="stylesheet" href="/static/css/designs.css">
+    <link rel="stylesheet" href="/static/css/dom.css">
     <title>Trust Business Five Sarl</title>
 </head>
 
@@ -22,12 +23,12 @@
             <li class="dropdown">
                 <a href="#">Domaines d'expertise</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#Environnement.html">Environnement</a></li>
-                    <li><a href="#Reboisement&GF.html">Reboisement et gestion des forêts</a></li>
-                    <li><a href="#Agriculture.html">Agriculture</a></li>
-                    <li><a href="#Infrastructure.html">Infrastructure</a></li>
-                    <li><a href="#Economie.html">Economie</a></li>
-                    <li><a href="#Urgence&GF.html">Urgence et gestion des conflits</a></li>
+                    <li><a href="{% url 'home:env' %}">Environnement</a></li>
+                    <li><a href="{% url 'home:reb' %}">Reboisement et gestion des forêts</a></li>
+                    <li><a href="{% url 'home:agri' %}">Agriculture</a></li>
+                    <li><a href="{% url 'home:infra' %}">Infrastructure</a></li>
+                    <li><a href="{% url 'home:econ' %}">Economie</a></li>
+                    <li><a href="{% url 'home:urgence' %}">Urgence et gestion des conflits</a></li>
                 </ul>
             </li>
             <li><a href="{% url 'home:offres' %}">Offres</a></li>
@@ -35,7 +36,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div>
-            <input type="search" placeholder="Rechercher"><a class="sear" href="#"><i class="bi bi-search"></i></a>
+            <input type="search" style="font-size: 0.8rem; padding: 4px 5px;" placeholder="Rechercher"><a class="sear" href="#"><i class="bi bi-search"></i></a>
         </div>
 
         <!-- Menu responsive -->
@@ -50,12 +51,12 @@
                 <li class="dropdown">
                     <a href="#">Domaines d'expertise</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#Environnement.html">Environnement</a></li>
-                        <li><a href="#Reboisement&GF.html">Reboisement et gestion des forêts</a></li>
-                        <li><a href="#Agriculture.html">Agriculture</a></li>
-                        <li><a href="#Infrastructure.html">Infrastructure</a></li>
-                        <li><a href="#Economie.html">Economie</a></li>
-                        <li><a href="#Urgence&GF.html">Urgence et gestion des conflits</a></li>
+                        <li><a href="{% url 'home:env' %}">Environnement</a></li>
+                        <li><a href="{% url 'home:reb' %}">Reboisement et gestion des forêts</a></li>
+                        <li><a href="{% url 'home:agri' %}">Agriculture</a></li>
+                        <li><a href="{% url 'home:infra' %}">Infrastructure</a></li>
+                        <li><a href="{% url 'home:econ' %}">Economie</a></li>
+                        <li><a href="{% url 'home:urgence' %}">Urgence et gestion des conflits</a></li>
                     </ul>
                 </li>
                 <li><a href="{% url 'home:offres' %}">Offres</a></li>
@@ -179,11 +180,6 @@
             menuResp.classList.toggle('hide-menu')
             menuResp.classList.toggle('show-menu')
         }
-
-
-
-
-
 
 
 

@@ -18,8 +18,42 @@ def Offres(request):
     template_name = 'home/offres.html'
     return render(request, template_name)
 
+
+
+def DomaineAgri(request):
+    template_name = 'domaine/agriculture.html'
+    return render(request, template_name)
+
+def DomaineEcon(request):
+    template_name = 'domaine/economie.html'
+    return render(request, template_name)
+
+def DomaineEnv(request):
+    template_name = 'domaine/environement.html'
+    return render(request, template_name)
+
+def DomaineInfra(request):
+    template_name = 'domaine/infrastructure.html'
+    return render(request, template_name)
+
+def DomaineReb(request):
+    template_name = 'domaine/reboisement.html'
+    return render(request, template_name)
+
+def DomaineUrgence(request):
+    template_name = 'domaine/urgence.html'
+    return render(request, template_name)
+
+
+
+def MissionSante(request):
+    template_name = 'mission/santepublic.html'
+    return render(request, template_name)
+
+
+
 def Ecoplus(request):
-    template_name = 'home/ecoplus.html'
+    template_name = 'ecoplus/index.html'
     return render(request, template_name)
 
 def Dashboard(request):
@@ -27,11 +61,12 @@ def Dashboard(request):
     return render(request, template_name)
 
 
+
 class addMission(CreateView):
     model = Mission
-    template_name = 'dash/missionForm.html'
-    success_url = '/showMission/'
     fields = ['title', 'image', 'desc']
+    success_url = '/showMission/'
+    template_name = 'dash/addMission.html'
 
 def showMission(request):
     template_name = 'dash/missions.html'
@@ -41,34 +76,12 @@ def showMission(request):
     }
     return render(request, template_name, context)
 
+class updateMission(UpdateView):
+    model = Mission
+    fields = ['title', 'image', 'desc']
+    success_url = "/showMission/"
+    template_name = 'dash/updateMission.html'
+
 
 class DashboardView(ListView):
     template_name = 'admin/admin.html'
-
-class GeeksDetailView(DetailView):
-    # specify the model to use
-    model = Mission
-
-class GeeksUpdateView(UpdateView):
-    # specify the model you want to use
-    model = Mission
-
-    # specify the fields
-    fields = [
-        "title",
-        "description"
-    ]
-
-    # can specify success url
-    # url to redirect after successfully
-    # updating details
-    success_url ="/"
-
-class GeeksDeleteView(DeleteView):
-    # specify the model you want to use
-    model = Mission
-    
-    # can specify success url
-    # url to redirect after successfully
-    # deleting object
-    success_url ="/"

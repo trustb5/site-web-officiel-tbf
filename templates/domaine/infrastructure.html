@@ -1,0 +1,30 @@
+{% extends '../home/base.html' %}
+{% block content %}
+
+    <section class="domaine">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="whiteBox">
+                        <img src="/static/images/Q.jpg" alt="" style="width: 100%; height: 80%;">
+                        <h3>Entrepreneuriat et partenariat dans la promotion des infrastructures</h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="greenBox">
+                        <p>
+                            Pour soutenir le développement des communautés, nous nous 
+                            engageons dans des projets d'infrastructures durables, 
+                            notamment dans les secteurs de l'énergie, des transports et 
+                            de la construction. Nos solutions visent à répondre aux 
+                            besoins actuels tout en préparant l'avenir avec des 
+                            infrastructures résilientes et respectueuses de l'environnement.
+                        </p>
+                        <a href="{% url 'home:home' %}#contact">Contactez-nous</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}
