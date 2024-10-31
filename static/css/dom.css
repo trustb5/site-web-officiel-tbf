@@ -1,0 +1,47 @@
+.domaine{
+    background-image: url(../images/H.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+.domaine .container{
+    padding: 30px 0;
+}
+
+.domaine .container .whiteBox{
+    height: 75vh;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4)
+}
+
+.domaine .container .whiteBox h3{
+    color: #2e7d32;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.domaine .container .greenBox{
+    background-color: #2e7d32;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4)
+}
+
+.domaine .container .greenBox p{
+    color: #fff;
+    font-size: 20px;
+    font-size: 1rem;
+}
+
+.domaine .container .greenBox a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #FF9800;
+    padding: 14px 18px;
+    border-radius: 3px;
+}
