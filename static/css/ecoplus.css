@@ -61,6 +61,11 @@ input:focus{
     border-bottom-right-radius: 10px;
 }
 
+@media all and (max-width: 992px) {
+    
+}
+
+
 .accueil{
     background-color: #ff000009;
     height: 91vh;
@@ -74,6 +79,10 @@ input:focus{
     color: #000;
     margin-top: 200px;
     margin-bottom: 10px;
+}
+
+.accueil .over .image img {
+    width: 700px;
 }
 
 .accueil .container .row a{
@@ -92,6 +101,29 @@ input:focus{
     color: #ff0000;
     border: 1px solid #ff0000;
 }
+
+@media all and (max-width: 992px) {
+    .accueil .over .text {
+        position: absolute;
+        left: 10px;
+        width: 90%;;
+        /* background-color: rgba(0, 0, 0, 0.8); */
+        z-index: 9999;
+    }
+
+    .accueil .over .text h1{
+        margin-top: 230px;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+
+    .accueil .over .image img {
+        width: 100%;
+    }
+}
+
 
 .about .container{
     padding: 40px 0;
@@ -227,9 +259,9 @@ input:focus{
 }
 
 .inscription .container form{
-    width: 60%;
-    margin-left: 255px;
-    padding: 10px 100px;
+    max-width: 30rem;
+    padding: 10px 30px;
+    margin: 10px;
 }
 
 .inscription .container form input,
