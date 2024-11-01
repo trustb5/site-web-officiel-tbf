@@ -1,0 +1,22 @@
+{% extends './base.html' %}
+{% block content %}
+    <section style="
+    background-color: #2e7d32;
+    height: 100vh;
+    padding: 40px;
+    text-align: center;">
+        <div class="container">
+            <div class="content d-flex justify-content-center">
+                <div>
+                    <img src="/static/images/Error500.png" alt="" width="35%">
+                    <p style="
+                    color: #fff;
+                    font-size: 25px;">
+                        <span style="font-weight: 900; color: #ffd900;">Les informations que vous recherchez sont introuvables</span> <br>
+                    </p>
+                    <a href="{% url 'home:home' %}" style="text-decoration: none; color: #2e7d32; background-color: #fff; padding: 10px 20px; font-weight: bold; box-shadow: 0 0 10px #73ff00;">Retour à la page d'accueil</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

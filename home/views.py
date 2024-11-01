@@ -31,6 +31,16 @@ def Offres(request):
     return render(request, template_name, context)
 
 
+def error_404(request, exception):
+    return render(request, 'error_404.html', status=404)
+ 
+def error_500(request):
+    return render(request, 'error_505.html', status=500)
+ 
+def search(request):
+    return render(request, 'home/search.html')
+
+
 
 def DomaineAgri(request):
     template_name = 'domaine/agriculture.html'

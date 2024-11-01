@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/">
+</head>
+<style>
+    body, html{
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    section{
+        background-color: #2e7d32;
+        height: 100vh;
+        padding: 40px;
+        text-align: center;
+    }
+    section div p{
+        color: #fff;
+        font-size: 25px;
+    }
+</style>
+<body>
+    <section>
+        <div class="container">
+            <div class="content d-flex justify-content-center">
+                <div>
+                    <img src="/static/images/Error500.png" alt="" width="35%">
+                    <p>
+                        <span style="font-weight: 900; color: #ffd900;">Les informations que vous recherchez sont introuvables</span> <br>
+                    </p>
+                    <a href="{% url 'home:home' %}" style="text-decoration: none; color: #2e7d32; background-color: #fff; padding: 10px 20px; font-weight: bold; box-shadow: 0 0 10px #73ff00;">Retour à la page d'accueil</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

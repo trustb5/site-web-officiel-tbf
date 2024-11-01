@@ -1,0 +1,25 @@
+{% extends './home/base.html' %}
+{% block content %}
+    <section style="
+    background-color: #2e7d32;
+    height: 100vh;
+    padding: 40px;
+    text-align: center;">
+        <div class="container">
+            <div class="content d-flex justify-content-center">
+                <div>
+                    <img src="/static/images/Error.png" alt="" width="55%">
+                    <p style="
+                    color: #fff;
+                    font-size: 25px;"
+                    >
+                        <span style="font-weight: 900; color: #ffd900;">La page que vous recherchez n'est pas disponible</span> <br>
+                    </p>
+                    <a href="{% url 'home:home' %}" style="text-decoration: none; color: #2e7d32; background-color: #fff; padding: 10px 20px; font-weight: bold; box-shadow: 0 0 10px #73ff00;">Retournez à la page d'accueil</a>
+                    <br><br> ou <br><br>
+                    <a href="{% url 'home:home' %}#contact" style="text-decoration: none; color: #2e7d32; background-color: #fff; padding: 10px 20px; font-weight: bold; box-shadow: 0 0 10px #73ff00;">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

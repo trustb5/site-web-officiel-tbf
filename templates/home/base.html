@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/css/des.css">
+    <link rel="stylesheet" href="/static/css/files.css">
     <link rel="stylesheet" href="/static/css/dom.css">
     <title>Trust Business Five Sarl</title>
 </head>
@@ -36,7 +36,10 @@
             <li><a href="{% url 'home:home' %}#contact">Contact</a></li>
         </ul>
         <div>
-            <input type="search" style="font-size: 0.8rem; padding: 4px 5px;" placeholder="Rechercher"><a class="sear" href="#"><i class="bi bi-search"></i></a>
+            <!-- <form action="{% url 'home:search' %}" method="post"> -->
+                <!-- {% csrf_token %} -->
+                <input type="search" style="font-size: 0.8rem; padding: 4px 5px;" placeholder="Rechercher"><a class="sear" href="{% url 'home:search' %}" ><i class="bi bi-search"></i></a>
+            <!-- </form> -->
         </div>
 
         <!-- Menu responsive -->
@@ -124,7 +127,7 @@
                         d'offres des services de qualité en République 
                         Démocratique du Congo et à l'étranger.
                     </p>
-                    <a href="{% url 'home:about' %}">En savoir plus</a>
+                    <a href="{% url 'home:devis-form' %}">Demander un devis</a>
                 </div>
             </div>
         </div>
