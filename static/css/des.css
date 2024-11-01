@@ -124,7 +124,7 @@ section h1{
     top: 0px;
     width: 100%;
     height: 100%;
-    z-index: 99999;
+    z-index: 999;
     transition: all 300ms;
     background-color: rgba(0, 0, 0, 0.1);
 }
@@ -164,6 +164,9 @@ section h1{
     background-color: rgba(0, 0, 0, 0.26);
     min-height: 50vh;
     padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .accueil .container{
@@ -385,6 +388,8 @@ section h1{
 .mission .container .content .contenu img{
     width: 100%;
     height: 200px;
+    -o-object-fit: cover;
+    object-fit: cover;
     border-radius: 3px;
 }
 

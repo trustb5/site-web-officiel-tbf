@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/css/designs.css">
-    <link rel="stylesheet" href="/static/css/doms.css">
+    <link rel="stylesheet" href="/static/css/des.css">
+    <link rel="stylesheet" href="/static/css/dom.css">
     <title>Trust Business Five Sarl</title>
 </head>
 
@@ -40,10 +40,10 @@
         </div>
 
         <!-- Menu responsive -->
-        <div id="menu-responsive" class="menu-responsive hide-menu d-lg-none" onclick="showMenu()">
-            <ul class="nav position-absolute" style="z-index: 999;">
+        <div id="menu-responsive" class="menu-responsive hide-menu d-lg-none">
+            <ul class="nav position-absolute">
                 <div style="position: absolute; right: 10px; top: 10px; padding: 5px; z-index: 999;">
-                    <img src="/static/images/menu.png" alt="menu bar" onclick="showMenu()" style="width: 25px; cursor: pointer;">
+                    <img src="/static/images/menu.png" alt="menu bar" style="width: 25px; cursor: pointer;"  onclick="showMenu()">
                 </div>
                 <li><a href="{% url 'home:home' %}">Accueil</a></li>
                 <li><a href="#Missions">Missions</a></li>
@@ -61,8 +61,9 @@
                 <li><a href="{% url 'home:offres' %}">Offres</a></li>
                 <li><a href="{% url 'home:programme' %}">Projets</a></li>
                 <li><a href="{% url 'home:about' %}">À propos</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="{% url 'home:home' %}#contact">Contact</a></li>
             </ul>
+            <div style="position: absolute;" onclick="showMenu()"></div>
         </div>
     </div>
 

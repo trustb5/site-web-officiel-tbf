@@ -12,11 +12,11 @@
 }
 
 .domaine .container .whiteBox{
-    min-height: 75vh;
     background-color: #fff;
     padding: 30px;
     border-radius: 30px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .4)
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+    margin-bottom: 10px;
 }
 
 .domaine .container .whiteBox h3{
