@@ -18,6 +18,10 @@ def Programme(request):
     template_name = 'home/programme.html'
     return render(request, template_name)
 
+def About(request):
+    template_name = 'home/about.html'
+    return render(request, template_name)
+
 def Offres(request):
     template_name = 'home/offres.html'
     offres = Offre.objects.all()
