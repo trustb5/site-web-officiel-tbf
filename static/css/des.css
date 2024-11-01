@@ -222,7 +222,30 @@ section h1{
     background-color: #266829;
 }
 
+.home-video {
+    margin-top: -30px;
+}
+
+.home-video video {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 992px) {
+    .home-video {
+        margin-top: -100px;
+    }
+    .about {
+        margin-top: 150px;
+    }
+}
+
 /* La section About */
+.about {
+    margin-top: 100px;
+}
+
 .about .container h1{
     text-align: center;
     font-size: 0px;
