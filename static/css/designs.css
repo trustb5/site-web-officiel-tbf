@@ -142,7 +142,7 @@ section h1{
     position: inherit;
     flex-direction: column;
     background-color: #fff;
-    width: 30%;
+    width: 50%;
     height: 100%;
     padding-top: 50px;
 }
@@ -247,6 +247,25 @@ section h1{
     border-bottom-left-radius: 20px;
     transition: all 200ms;
 }
+
+@media screen and (max-width: 992px) {
+    .about .container .content .aboutus{
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-bottom: 15px;
+    }
+
+    .about .container .content .ouradress{
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-bottom: 15px;
+    }
+}
+
 .about .container .content .aboutus:hover{
     transform: scale(1.1);
     transition: all 200ms;
@@ -627,13 +646,24 @@ section h1{
     align-items: center;
     margin: 0px auto;
     margin-top: 30px;
-
 }
 
 .accueil .container .ecoplus h1{
     color: #ff0000;
     font-family: Poppins;
     font-size: 100px;
+}
+
+@media screen and (max-width: 756px) {
+    .accueil .container .ecoplus{
+        padding: 0px;
+    }
+
+    .accueil .container .ecoplus h1{
+        color: #ff0000;
+        font-family: Poppins;
+        font-size: 50px;
+    }
 }
 
 .accueil .container h1 span{

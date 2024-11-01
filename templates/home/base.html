@@ -40,13 +40,12 @@
         </div>
 
         <!-- Menu responsive -->
-        <div id="menu-responsive" class="menu-responsive hide-menu d-lg-none">
-            <ul class="nav">
+        <div id="menu-responsive" class="menu-responsive hide-menu d-lg-none" onclick="showMenu()">
+            <ul class="nav position-absolute" style="z-index: 999;">
                 <div style="position: absolute; right: 10px; top: 10px; padding: 5px; z-index: 999;">
                     <img src="/static/images/menu.png" alt="menu bar" onclick="showMenu()" style="width: 25px; cursor: pointer;">
                 </div>
                 <li><a href="{% url 'home:home' %}">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
                 <li><a href="#Missions">Missions</a></li>
                 <li class="dropdown">
                     <a href="#">Domaines d'expertise</a>
@@ -61,6 +60,7 @@
                 </li>
                 <li><a href="{% url 'home:offres' %}">Offres</a></li>
                 <li><a href="{% url 'home:programme' %}">Projets</a></li>
+                <li><a href="{% url 'home:about' %}">À propos</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
