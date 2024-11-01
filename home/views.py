@@ -114,7 +114,7 @@ class updateMission(UpdateView):
 
 class addDomaine(CreateView):
     model = Domaine
-    fields = ['title', 'detail', 'image']
+    fields = ['parent', 'title', 'detail', 'image']
     success_url = '/showDomaine/'
     template_name = 'dash/addDomaine.html'
 

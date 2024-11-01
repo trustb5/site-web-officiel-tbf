@@ -15,8 +15,8 @@
                                 <th>
                                     <td>Image</td>
                                     <td>Titre</td>
-                                    <td>Detail</td>
-                                    <td>Description</td>
+                                    <td>Domaine</td>
+                                    <td>Details</td>
                                     <td>Actions</td>
                                 </th>
                             </thead>
@@ -26,7 +26,8 @@
                                     <td></td>
                                     <td><img src="{{item.image.url}}" width="70" height="50" alt="{{item.title}}"></td>
                                     <td>{{item.title}}</td>
-                                    <td style="min-width: 30rem;">{{item.desc}}</td>
+                                    <td>{{item.parent}}</td>
+                                    <td style="min-width: 30rem;">{{item.detail}}</td>
                                     <td>
                                         <a href="#" class="btn btn-warning mb-1">Modifier</a>
                                         <a href="#" class="btn btn-danger mb-1">Supprimer</a>

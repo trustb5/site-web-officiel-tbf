@@ -28,6 +28,7 @@
             <hr>
             <div class="row">
                 {% for domaine in domaines %}
+                {% if domaine.parent == 'economie' %}
                 <div class="col-lg-6">
                     <div class="row bg-white m-1 p-2" style="border-radius: 10px;">
                         <div class="col-3">
@@ -38,6 +39,7 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
                 {% endfor %}
             </div>
             {% endif %}
