@@ -25,6 +25,23 @@
                     </div>
                 </div>
             </div>
+            {% if domaines %}
+            <hr>
+            <div class="row">
+                {% for domaine in domaines %}
+                <div class="col-lg-6">
+                    <div class="row bg-white m-1 p-2" style="border-radius: 10px;">
+                        <div class="col-3">
+                            <img src="{{domaine.image.url}}" style="width: 130px; height: 130px; object-fit: cover;margin-right: 10px;" alt="">
+                        </div>
+                        <div class="col-9">
+                            <p class="m-0">{{domaine.detail}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
         </div>
     </section>
     

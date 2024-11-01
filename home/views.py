@@ -3,12 +3,12 @@ from django.contrib import messages
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from .models import Mission
+from .models import Mission, Domaine
 
 
 def Home(request):
-    missions = Mission.objects.all()
     template_name = 'home/index.html'
+    missions = Mission.objects.all()
     context = {
         'missions': missions,
     }
@@ -26,27 +26,51 @@ def Offres(request):
 
 def DomaineAgri(request):
     template_name = 'domaine/agriculture.html'
-    return render(request, template_name)
+    domaines = Domaine.objects.all()
+    context = {
+        'domaines': domaines,
+    }
+    return render(request, template_name, context)
 
 def DomaineEcon(request):
     template_name = 'domaine/economie.html'
-    return render(request, template_name)
+    domaines = Domaine.objects.all()
+    context = {
+        'domaines': domaines,
+    }
+    return render(request, template_name, context)
 
 def DomaineEnv(request):
     template_name = 'domaine/environement.html'
-    return render(request, template_name)
+    domaines = Domaine.objects.all()
+    context = {
+        'domaines': domaines,
+    }
+    return render(request, template_name, context)
 
 def DomaineInfra(request):
     template_name = 'domaine/infrastructure.html'
-    return render(request, template_name)
+    domaines = Domaine.objects.all()
+    context = {
+        'domaines': domaines,
+    }
+    return render(request, template_name, context)
 
 def DomaineReb(request):
     template_name = 'domaine/reboisement.html'
-    return render(request, template_name)
+    domaines = Domaine.objects.all()
+    context = {
+        'domaines': domaines,
+    }
+    return render(request, template_name, context)
 
 def DomaineUrgence(request):
     template_name = 'domaine/urgence.html'
-    return render(request, template_name)
+    domaines = Domaine.objects.all()
+    context = {
+        'domaines': domaines,
+    }
+    return render(request, template_name, context)
 
 
 
@@ -85,6 +109,23 @@ class updateMission(UpdateView):
     fields = ['title', 'image', 'desc']
     success_url = "/showMission/"
     template_name = 'dash/updateMission.html'
+
+
+
+class addDomaine(CreateView):
+    model = Domaine
+    fields = ['title', 'detail', 'image']
+    success_url = '/showDomaine/'
+    template_name = 'dash/addDomaine.html'
+
+def showDomaine(request):
+    template_name = 'dash/domaines.html'
+    domaines = Domaine.objects.all()
+    context = {
+        'domaines': domaines,
+    }
+    return render(request, template_name, context)
+
 
 
 class DashboardView(ListView):

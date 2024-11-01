@@ -1,0 +1,28 @@
+{% extends '../home/base.html' %}
+{% block content %}
+
+    <section class="accueil addMission">
+        <div class="container">
+            <div class="row justify-content-center m-0">
+                <form method="post" enctype="multipart/form-data" class="bg-white p-3" style="border-radius: 10px; max-width: 40rem;">
+                    <h3 class="my-4">Ajouter une mission</h3>
+                    {% csrf_token %}
+                    <label for="id_title" class="d-block mb-3">
+                        Titre
+                        {{form.title}}
+                    </label>
+                    <label for="id_image" class="d-block mb-3">
+                        Image
+                        {{form.image}}
+                    </label>
+                    <label for="id_desc" class="d-block mb-3">
+                        Detail
+                        {{form.detail}}
+                    </label>
+                    <button type="submit" class="btn btn-success">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

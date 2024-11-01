@@ -9,3 +9,13 @@ class Mission(models.Model):
 
     def __str__(self):
         return f'{self.title}'
+
+class Domaine(models.Model):
+    title = models.CharField(max_length=50)
+    image = models.ImageField(upload_to="domaine/")
+    detail = models.TextField()
+    created_at = models.DateField(auto_now_add=True)
+    update_at = models.DateField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.title}'

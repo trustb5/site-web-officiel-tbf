@@ -5,8 +5,8 @@
         <div class="container text-center">
             <h1 class="text-center text-white p-2">Dashboard</h1>
             <a href="{% url 'home:showMission' %}" class="btn btn-success mb-2">Gérer les missions</a><br>
-            <a href="#" class="btn btn-success mb-2">Gérer les offres</a><br>
-            <a href="#" class="btn btn-success mb-2">Gérer les programmes</a><br>
+            <a href="{% url 'home:showDomaine' %}" class="btn btn-success mb-2">Gérer les domaines d'expertise</a><br>
+            <!-- <a href="#" class="btn btn-success mb-2">Gérer les programmes</a><br> -->
             <a href="{% url 'accounts:logout' %}" class="btn btn-danger mb-2">Déconnexion</a><br>
         </div>
     </section>

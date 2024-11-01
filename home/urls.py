@@ -10,8 +10,8 @@ urlpatterns = [
 
     path('domaine/agriculture', views.DomaineAgri, name='agri'),
     path('domaine/economie', views.DomaineEcon, name='econ'),
-    path('domaine/environement', views.DomaineEcon, name='env'),
-    path('domaine/infrastructure', views.DomaineEcon, name='infra'),
+    path('domaine/environement', views.DomaineEnv, name='env'),
+    path('domaine/infrastructure', views.DomaineInfra, name='infra'),
     path('domaine/reboisement', views.DomaineReb, name='reb'),
     path('domaine/urgence', views.DomaineUrgence, name='urgence'),
 
@@ -23,4 +23,7 @@ urlpatterns = [
     path('addMission/', views.addMission.as_view(), name='addMission'),
     path('showMission/', views.showMission, name='showMission'),
     path('updateMission/<pk>', views.updateMission.as_view(), name='updateMission'),
+
+    path('addDomaine/', views.addDomaine.as_view(), name='addDomaine'),
+    path('showDomaine/', views.showDomaine, name='showDomaine'),
 ]
