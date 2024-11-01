@@ -15,7 +15,7 @@ urlpatterns = [
     path('domaine/reboisement', views.DomaineReb, name='reb'),
     path('domaine/urgence', views.DomaineUrgence, name='urgence'),
 
-    path('mission/detail_mission', views.MissionSante, name='sante'),
+    path('mission/formulaire-devis', views.DevisForm, name='devis-form'),
     
     path('ecoplus', views.Ecoplus, name='ecoplus'),
     path('dashboard/', views.Dashboard, name='dash'),

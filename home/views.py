@@ -7,8 +7,12 @@ from .models import Mission
 
 
 def Home(request):
+    missions = Mission.objects.all()
     template_name = 'home/index.html'
-    return render(request, template_name)
+    context = {
+        'missions': missions,
+    }
+    return render(request, template_name, context)
 
 def Programme(request):
     template_name = 'home/programme.html'
@@ -46,8 +50,8 @@ def DomaineUrgence(request):
 
 
 
-def MissionSante(request):
-    template_name = 'mission/santepublic.html'
+def DevisForm(request):
+    template_name = 'mission/formulaire-devis.html'
     return render(request, template_name)
 
 

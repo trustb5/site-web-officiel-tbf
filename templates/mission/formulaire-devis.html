@@ -1,0 +1,31 @@
+{% extends '../home/base.html' %}
+{% block content %}
+
+    <section class="mission-single">
+        <div class="container">
+            <!-- <h1>Santé publique</h1> -->
+            <div class="row justify-content-center">
+                <div class=" col-md-9 col-lg-6 mb-3 p-2">
+                    <form method="post" class="w-100 bg-white p-3" style="border-radius: 10px;">
+                        {% csrf_token %}
+                        <h4 class="pt-2 pb-3">Demander votre devis</h4>
+                        <label for="" class="d-block mb-3">
+                            <input type="text" class="form-control" placeholder="Votre nom" required>
+                        </label>
+                        <label for="" class="d-block mb-3">
+                            <input type="email" class="form-control" placeholder="Votre email" required>
+                        </label>
+                        <label for="" class="d-block mb-3">
+                            <input type="text" class="form-control" placeholder="Votre numéro de téléphone" required>
+                        </label>
+                        <label for="" class="d-block mb-3">
+                            <textarea name="" rows="7" class="form-control" placeholder="Détails sur le devis" required></textarea>
+                        </label>
+                        <button type="submit" class="btn btn-success px-5">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

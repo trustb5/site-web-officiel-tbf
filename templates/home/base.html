@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap-icons.css">
     <link rel="stylesheet" href="/static/css/designs.css">
-    <link rel="stylesheet" href="/static/css/dom.css">
+    <link rel="stylesheet" href="/static/css/doms.css">
     <title>Trust Business Five Sarl</title>
 </head>
 
@@ -18,7 +18,7 @@
         <a class="logo" href="{% url 'home:home' %}"><img class="logo" src="/static/images/logo/LOGO PNG TRUST.png" alt=""></a>
         <ul class="nav d-none d-lg-flex">
             <li><a href="{% url 'home:home' %}">Accueil</a></li>
-            <li><a href="#Missions">Missions</a></li>
+            <li><a href="{% url 'home:home' %}#Missions">Missions</a></li>
             <li class="dropdown">
                 <a href="#">Domaines d'expertise</a>
                 <ul class="dropdown-menu">
@@ -131,7 +131,7 @@
 
     <footer>
         <div class="container">
-            <ul class="menu-list">
+            <!-- <ul class="menu-list">
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#">Projets</a></li>
                 <li class="dropdown">
@@ -149,15 +149,13 @@
                 <li><a href="#Missions">Missions</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#">Contact</a></li>
-            </ul>
+            </ul> -->
             <hr>
             <div class="content">
                 <img src="/static/images/TB5.jpg" alt="">
                 <div class="partainers">
-                    <p><i class="bi bi-universal-access"></i></p>
-                    <p><i class="bi bi-x-diamond-fill"></i></p>
-                    <p><i class="bi bi-yin-yang"></i></p>
-                    <p><i class="bi bi-windows"></i></p>
+                    <p class="m-0"><a href="http://plu.us/TB5" target="_blank" class="text-white"><i class="bi bi-universal-access"></i></a></p> &nbsp;&nbsp;&nbsp;
+                    <p class="m-0"><a href="http://plu.us/TB5" target="_blank" class="text-white"><i class="bi bi-x-diamond-fill"></i></a></p>
                 </div>
                 <div class="social">
                     <a href="https://www.facebook.com/people/Trust-Business-Five/61566912243431/?rdid=rcQJ3lrhWXJltUVv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14rrLd1fRr%2F"><i class="bi bi-facebook" style="color: rgb(0, 89, 255);"></i></a>
