@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from .models import Mission, Domaine
+from .models import Mission, Domaine, Offre
 
 
 def Home(request):
@@ -20,7 +20,11 @@ def Programme(request):
 
 def Offres(request):
     template_name = 'home/offres.html'
-    return render(request, template_name)
+    offres = Offre.objects.all()
+    context = {
+        'offres': offres,
+    }
+    return render(request, template_name, context)
 
 
 
@@ -123,6 +127,22 @@ def showDomaine(request):
     domaines = Domaine.objects.all()
     context = {
         'domaines': domaines,
+    }
+    return render(request, template_name, context)
+
+
+
+class addOffre(CreateView):
+    model = Offre
+    fields = ['title', 'detail']
+    success_url = '/showOffre/'
+    template_name = 'dash/addOffre.html'
+
+def showOffre(request):
+    template_name = 'dash/Offres.html'
+    offres = Offre.objects.all()
+    context = {
+        'offres': offres,
     }
     return render(request, template_name, context)
 

@@ -1,0 +1,44 @@
+{% extends '../home/base.html' %}
+{% block content %}
+
+    <section class="accueil">
+        <div class="container">
+            <div class="row m-0">
+                {% if offres %}
+                    <div class="d-flex align-items-center mb-2">
+                        <h3 class="text-white">Nos offres</h3> &nbsp;&nbsp;
+                        <a href="{% url 'home:addOffre' %}">Ajouter une offre</a>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table bg-white" style="border-radius: 10px;">
+                            <thead>
+                                <th>
+                                    <td>Titre</td>
+                                    <td>Details</td>
+                                    <td>Actions</td>
+                                </th>
+                            </thead>
+                            <tbody>
+                                {% for item in details %}
+                                <tr>
+                                    <td></td>
+                                    <td>{{item.title}}</td>
+                                    <td style="min-width: 30rem;">{{item.detail}}</td>
+                                    <td>
+                                        <a href="{% url 'home:updateMission' item.id %}" class="btn btn-warning mb-1">Modifier</a>
+                                        <a href="#" class="btn btn-danger mb-1">Supprimer</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% else %}
+                <h3 class="text-center mb-3"><i class="text-white">Aucune donnée pour l'instant</i></h3>
+                <a href="{% url 'home:addOffre' %}" class="btn btn-success w-50 mx-auto">Ajouter une offre</a>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

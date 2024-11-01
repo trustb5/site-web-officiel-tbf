@@ -4,7 +4,21 @@
     <section class="accueil">
         <div class="container">
             <h1 class="text-center text-white p-2">Offres d'emplois</h1>
+            {% if offres %}
+            {% for offre in offres %}
+            <div class="row m-0">
+                <div class="col-lg-6">
+                    <div class="bg-white m-2" style="border-radius: 10px;">
+                        <h4 class="text-center">{{offre.title}}</h4>
+                        <hr class="m-2">
+                        <p class="m-0">{{offre.detail}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
             <h4 class="text-center text-white">Aucune offre pour le moment</h4>
+            {% endif %}
         </div>
     </section>
 

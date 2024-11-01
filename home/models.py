@@ -20,3 +20,12 @@ class Domaine(models.Model):
 
     def __str__(self):
         return f'{self.title} - {self.parent}'
+
+class Offre(models.Model):
+    title = models.CharField(max_length=50)
+    detail = models.TextField()
+    created_at = models.DateField(auto_now_add=True)
+    update_at = models.DateField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.title}'

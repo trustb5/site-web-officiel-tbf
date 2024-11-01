@@ -26,4 +26,7 @@ urlpatterns = [
 
     path('addDomaine/', views.addDomaine.as_view(), name='addDomaine'),
     path('showDomaine/', views.showDomaine, name='showDomaine'),
+
+    path('addOffre/', views.addOffre.as_view(), name='addOffre'),
+    path('showOffre/', views.showOffre, name='showOffre'),
 ]
