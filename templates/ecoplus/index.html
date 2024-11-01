@@ -6,63 +6,63 @@
     <title>Accueil - ECOLE-PLUS</title>
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/bootstrap-icons.css">
-    <link rel="stylesheet" href="/static/css/ecoplus.css">
+    <link rel="stylesheet" href="/static/css/eco.css">
+    <style>
+        /* Styles pour la boîte de dialogue personnalisée */
+        .custom-alert,
+        .dialogue{
+            display: none;
+            position: fixed;
+            text-align: center;
+            width: 500px;
+            top: 50%;
+            left: 50%;
+            border-radius: 20px;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+    
+        .custom-alert h2,
+        .dialogue h2{
+            color: #ff0000;
+            font-size: 25px;
+        }
+    
+        .custom-alert button,
+        .dialogue button{
+            margin-top: 10px;
+            padding: 5px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff0000;
+            color: #fff;
+            width: 35%;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
 </head>
-<style>
-    /* Styles pour la boîte de dialogue personnalisée */
-    .custom-alert,
-    .dialogue{
-        display: none;
-        position: fixed;
-        text-align: center;
-        width: 500px;
-        top: 50%;
-        left: 50%;
-        border-radius: 20px;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        padding: 20px;
-        border: 1px solid #ccc;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-    }
-
-    .custom-alert h2,
-    .dialogue h2{
-        color: #ff0000;
-        font-size: 25px;
-    }
-
-    .custom-alert button,
-    .dialogue button{
-        margin-top: 10px;
-        padding: 5px 20px;
-        border: none;
-        border-radius: 5px;
-        background-color: #ff0000;
-        color: #fff;
-        width: 35%;
-    }
-    .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-    }
-</style>
 <body>
     <div class="navbar">
         <div class="container">
             <a href="{% url 'home:ecoplus' %}" style="text-decoration: none;"><h1>ECO<span>+</span></h1></a>
             <ul class="d-none d-lg-flex">
                 <li><a href="{% url 'home:ecoplus' %}">Accueil</a></li>
-                <li><a href="#about">A propos</a></li>
                 <li><a href="#programs">Programmes</a></li>
                 <li><a href="#avantages">Avantages</a></li>
+                <li><a href="#about">A propos</a></li>
                 <li><a href="#myForm">Inscription</a></li>
             </ul>
             <div>
@@ -115,19 +115,21 @@
                 <img src="/static/images/ecoplus/ECO +.gif" class="col-lg-6" alt="ECO+ gif" style="border-radius: 10px;">
                 <div class="col-lg-6">
                     <h5>A propos de <span>ECO+</span></h5>
-                    <p>
+                    <small>
                         ECO+ est un réseau d'entraide dédié à l'autonomie, à l'emploi, 
                         et à l'entrepreneuriat. Nous proposons des formations et 
                         des ateliers adaptés pour aider chacun à développer ses 
                         compétences et réussir.
-                    </p>
-                    <p>
+                    </small>
+                    <small>
                         Rejoignez notre programme et découvrez comment nous pouvons vous aider à réussir.
+                    </small>
+                    <small>
+                        ECO+ est un programme spécial de la <a href="{% url 'home:home' %}" target="_blank">Trust Business Five<i class="bi bi-link-45deg"></i></a>.
+                    </small> <br>
+                    <p class="text-center mt-5">
+                        <a href="{% url 'home:ecoplus' %}" class="btn">En savoir plus</a>
                     </p>
-                    <p>
-                        ECO+ est un programme spécial de la <a href="../Index.html">Trust Business Five<i class="bi bi-link-45deg"></i></a>.
-                    </p>
-                    <a href="{% url 'home:ecoplus' %}" class="btn">En savoir plus</a>
                 </div>
             </div>
         </div>
@@ -279,32 +281,32 @@
                     <h2 class="text-center">Inscription</h2>
                     <div class="form-group">
                         <label for="name">Nom</label>
-                        <input type="text" class="form-control" id="name" name="name" required placeholder="Votre réponse">
+                        <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="midname">Post-nom</label>
-                        <input type="text" class="form-control" id="midname" name="midname" required placeholder="Votre réponse">
+                        <input type="text" class="form-control" id="midname" name="midname" required>
                     </div>
                     <div class="form-group">
                         <label for="firstname">Prénom</label>
-                        <input type="text" class="form-control" id="firstname" name="firstname" required placeholder="Votre réponse">
+                        <input type="text" class="form-control" id="firstname" name="firstname" required>
                     </div>
                     <div class="form-group">
                         <label for="adresse">Adresse actuelle</label>
-                        <input type="text" class="form-control" id="adresse" name="adresse" required placeholder="Votre réponse">
+                        <input type="text" class="form-control" id="adresse" name="adresse" required>
                     </div>
                     <div class="form-group">
                         <label for="Tel">Numéro de Téléphone</label>
-                        <input type="text" class="form-control" id="Tel" name="Tel" required placeholder="Votre réponse">
+                        <input type="text" class="form-control" id="Tel" name="Tel" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Adresse Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required placeholder="exemple@domaine.com">
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="cours">Formation souhaitée</label> <br>
-                        <select name="cours" id="cours">
-                            <option value="0"></option>
+                        <select name="cours" id="cours" class="form-control">
+                            <option value="" selected disabled>----------</option>
                             <option value="caissier(ère)">Métier de caissier(ère)</option>
                             <option value="Anglais">Anglais prêt à l'emploi</option>
                             <option value="Informatique">Informatique prêt à l'emploi</option>
@@ -314,8 +316,8 @@
                     </div>
                     <div class="form-group">
                         <label for="vacation">Vacation</label> <br>
-                        <select name="vacation" id="vacation">
-                            <option value="0"></option>
+                        <select name="vacation" id="vacation" class="form-control">
+                            <option value="" selected disabled>----------</option>
                             <option value="caissier(ère)">Matin</option>
                             <option value="Anglais">Midi</option>
                             <option value="Informatique">Soir</option>
@@ -323,8 +325,8 @@
                     </div>
                     <div class="form-group">
                         <label for="heure">Heure de cours</label> <br>
-                        <select name="heure" id="heure">
-                            <option value="0"></option>
+                        <select name="heure" id="heure" class="form-control">
+                            <option value="" selected disabled>----------</option>
                             <option value="caissier(ère)">07h-9h</option>
                             <option value="Anglais">9h-12h</option>
                             <option value="Informatique">17h-20h</option>
