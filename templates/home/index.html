@@ -211,7 +211,8 @@
                 <div class="col-lg-6 p-0">
                     <div class="sending py-5">
                         <h3 class="mb-3">Envoyez-nous un message</h3>
-                        <form action="" id="myForm">
+                        <form action="{% url 'home:addContact' %}" method="post" id="myForm">
+                            {% csrf_token %}
                             <input type="text" name="name" id="name" placeholder="Nom">
                             <input type="email" name="email" id="email" placeholder="email">
                             <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>

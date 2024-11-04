@@ -1,0 +1,44 @@
+{% extends '../home/base.html' %}
+{% block content %}
+
+    <section class="accueil">
+        <div class="container">
+            <div class="row m-0">
+                <div class="col-lg-2 mb-2">
+                    {% include './dashMenu.html' %}
+                </div>
+                <div class="col-lg-10 mb-2">
+                    {% if contacts %}
+                    <div class="d-flex align-items-center mb-2">
+                        <h3 class="text-white">Contacts</h3> &nbsp;&nbsp;
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table bg-white" style="border-radius: 10px;">
+                            <thead>
+                                <th>
+                                    <td>Nom</td>
+                                    <td>Email</td>
+                                    <td>Message</td>
+                                </th>
+                            </thead>
+                            <tbody>
+                                {% for item in contacts %}
+                                <tr>
+                                    <td></td>
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.email}}</td>
+                                    <td style="min-width: 30rem;">{{item.message}}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <h3 class="text-center text-white mb-3"><i>Aucune donnée enregistrée pour l'instant</i></h3>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

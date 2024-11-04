@@ -4,7 +4,11 @@
     <section class="accueil">
         <div class="container">
             <div class="row m-0">
-                {% if domaines %}
+                <div class="col-lg-2 mb-2">
+                    {% include './dashMenu.html' %}
+                </div>
+                <div class="col-lg-10 mb-2">
+                    {% if domaines %}
                     <div class="d-flex align-items-center mb-2">
                         <h3 class="text-white">Nos domaines</h3> &nbsp;&nbsp;
                         <a href="{% url 'home:addDomaine' %}">Ajouter une domaine</a>
@@ -29,18 +33,24 @@
                                     <td>{{item.parent}}</td>
                                     <td style="min-width: 30rem;">{{item.detail}}</td>
                                     <td>
-                                        <a href="#" class="btn btn-warning mb-1">Modifier</a>
-                                        <a href="#" class="btn btn-danger mb-1">Supprimer</a>
+                                        <a href="{% url 'home:updateDomain' item.pk %}" class="btn btn-warning mb-1">Modifier</a>
+                                        <form action="{% url 'home:deleteDomain' item.pk %}" method="post">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-danger mb-1">Supprimer</button>
+                                        </form>
                                     </td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
                         </table>
                     </div>
-                {% else %}
-                <h3 class="text-center text-white mb-3"><i>Aucun domaine enregistré pour l'instant</i></h3>
-                <a href="{% url 'home:addDomaine' %}" class="btn btn-success w-50 mx-auto">Ajouter une domaine</a>
-                {% endif %}
+                    {% else %}
+                    <div class="text-center">
+                        <h3 class="text-white mb-3"><i>Aucune donnée enregistrée pour l'instant</i></h3>
+                        <a href="{% url 'home:addDomaine' %}" class="btn btn-success w-50">Ajouter une domaine</a>
+                    </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </section>

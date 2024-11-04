@@ -1,9 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.list import ListView
-from django.views.generic.detail import DetailView
-from .models import Mission, Domaine, Offre
+from .models import Mission, Domaine, Offre, Contact
 
 
 def Home(request):
@@ -144,6 +143,20 @@ def showDomaine(request):
     }
     return render(request, template_name, context)
 
+class updateDomaine(UpdateView):
+    model = Domaine
+    fields = ['parent', 'title', 'detail', 'image']
+    success_url = "/showDomaine/"
+    template_name = 'dash/updateDomaine.html'
+
+def deleteDomaine(request, pk):
+    obj = Domaine.objects.get(id = pk)
+    template_name = 'dash/domains.html'
+    if request.method == "POST":
+        obj.delete()
+        return redirect("home:showDomaine")
+    return render(request, template_name)
+
 
 
 class addOffre(CreateView):
@@ -157,6 +170,22 @@ def showOffre(request):
     offres = Offre.objects.all()
     context = {
         'offres': offres,
+    }
+    return render(request, template_name, context)
+
+
+
+class addContact(CreateView):
+    model = Contact
+    fields = ['name', 'email', 'message']
+    success_url = '/'
+    template_name = 'home/index.html'
+
+def showContact(request):
+    template_name = 'dash/contacts.html'
+    contacts = Contact.objects.all()
+    context = {
+        'contacts': contacts,
     }
     return render(request, template_name, context)
 

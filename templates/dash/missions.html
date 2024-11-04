@@ -4,7 +4,11 @@
     <section class="accueil">
         <div class="container">
             <div class="row m-0">
-                {% if missions %}
+                <div class="col-lg-2 mb-2">
+                    {% include './dashMenu.html' %}
+                </div>
+                <div class="col-lg-10 mb-2">
+                    {% if missions %}
                     <div class="d-flex align-items-center mb-2">
                         <h3 class="text-white">Nos missions</h3> &nbsp;&nbsp;
                         <a href="{% url 'home:addMission' %}">Ajouter une mission</a>
@@ -35,10 +39,13 @@
                             </tbody>
                         </table>
                     </div>
-                {% else %}
-                <h3 class="text-center mb-3"><i class="text-muted">Aucune donnée pour l'instant</i></h3>
-                <a href="{% url 'home:addMission' %}" class="btn btn-success w-50 mx-auto">Ajouter une mission</a>
-                {% endif %}
+                    {% else %}
+                    <div class="text-center">
+                        <h3 class="mb-3"><i class="text-white">Aucune donnée enregistrée pour l'instant</i></h3>
+                        <a href="{% url 'home:addMission' %}" class="btn btn-success w-50">Ajouter une mission</a>
+                    </div>
+                    {% endif %}
+                </div>
             </div>
         </div>
     </section>

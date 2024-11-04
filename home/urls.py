@@ -28,6 +28,11 @@ urlpatterns = [
 
     path('addDomaine/', views.addDomaine.as_view(), name='addDomaine'),
     path('showDomaine/', views.showDomaine, name='showDomaine'),
+    path('updateDomain/<pk>', views.updateDomaine.as_view(), name='updateDomain'),
+    path('deleteDomain/<pk>', views.deleteDomaine, name='deleteDomain'),
+
+    path('addContact/', views.addContact.as_view(), name='addContact'),
+    path('showContact/', views.showContact, name='showContact'),
 
     path('addOffre/', views.addOffre.as_view(), name='addOffre'),
     path('showOffre/', views.showOffre, name='showOffre'),

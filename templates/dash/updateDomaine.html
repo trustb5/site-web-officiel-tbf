@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row justify-content-center m-0">
                 <form method="post" enctype="multipart/form-data" class="bg-white p-3" style="border-radius: 10px; max-width: 40rem;">
-                    <h3 class="my-4">Ajouter un domaine</h3>
+                    <h3 class="my-4">Modifier le domaine</h3>
                     {% csrf_token %}
                     <label for="id_parent" class="d-block mb-3">
                         Domaine
@@ -23,15 +23,15 @@
                         Titre
                         {{form.title}}
                     </label>
+                    <label for="id_detail" class="d-block mb-3">
+                        Details
+                        {{form.detail}}
+                    </label>
                     <label for="id_image" class="d-block mb-3">
                         Image
                         {{form.image}}
                     </label>
-                    <label for="id_detail" class="d-block mb-3">
-                        Detail
-                        {{form.detail}}
-                    </label>
-                    <button type="submit" class="btn btn-success">Envoyer</button>
+                    <button type="submit" class="btn btn-success">Modifier</button>
                 </form>
             </div>
         </div>
