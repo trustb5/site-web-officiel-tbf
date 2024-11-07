@@ -253,7 +253,7 @@ body, html{
     color: #fff;
 }
 
-.inscription .container .formbox .inputbox input{
+.inscription .container .formbox .inputbox input, .inscription .container .formbox .inputbox textarea{
     width: 100%;
     border: none;
     background-color: transparent;

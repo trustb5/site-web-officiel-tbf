@@ -46,8 +46,10 @@ class CommandeSoja(models.Model):
     firstname = models.CharField(max_length=50)
     email = models.EmailField()
     numero = models.CharField(max_length=50)
-    adress = models.TextField()
+    adress = models.CharField(max_length=50)
+    quantite = models.CharField(max_length=5)
+    details = models.TextField(null=True, blank=True)
     created_at = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return f'{self.email}'
+        return f'{self.name} {self.midname} {self.firstname} {self.numero}'

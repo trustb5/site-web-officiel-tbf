@@ -196,9 +196,26 @@ def showContact(request):
 
 class addCommandeSoja(CreateView):
     model = CommandeSoja
-    fields = ['name', 'midname', 'firstname', 'email', 'numero', 'adress']
-    success_url = '/'
-    template_name = 'home/index.html'
+    fields = ['name', 'midname', 'firstname', 'email', 'numero', 'adress', 'quantite', 'details']
+    success_url = '/programme/soja'
+    template_name = 'home/soja.html'
+
+def addCommande(request):
+    template_name = 'home/soja.html'
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        midname = request.POST.get('midname')
+        firstname = request.POST.get('firstname')
+        numero = request.POST.get('numero')
+        email = request.POST.get('email')
+        adress = request.POST.get('adress')
+        quantite = request.POST.get('quantite')
+        details = request.POST.get('details')
+        data = CommandeSoja(name, midname, firstname, numero, email, adress, quantite, details)
+        data.save()
+        messages.success(request, 'Votre commande a été envoyé avec success')
+        return redirect('home:soja')
+    return render(request, template_name)
 
 def showCommandeSoja(request):
     template_name = 'dash/commandes.html'

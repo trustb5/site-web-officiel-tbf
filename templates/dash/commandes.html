@@ -22,6 +22,8 @@
                                     <td>Email</td>
                                     <td>Numéro</td>
                                     <td>Adresse</td>
+                                    <td>Quantité</td>
+                                    <td>Details</td>
                                 </th>
                             </thead>
                             <tbody>
@@ -33,7 +35,9 @@
                                     <td>{{item.firstname}}</td>
                                     <td>{{item.email}}</td>
                                     <td>{{item.numero}}</td>
-                                    <td style="min-width: 20rem;">{{item.adress}}</td>
+                                    <td style="min-width: 10rem;">{{item.adress}}</td>
+                                    <td>{{item.quantite}}</td>
+                                    <td>{{item.details}}</td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
