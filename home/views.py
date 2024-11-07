@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.list import ListView
-from .models import Mission, Domaine, Offre, Contact
+from .models import Mission, Domaine, Offre, Contact, CommandeSoja
 
 
 def Home(request):
@@ -190,6 +190,21 @@ def showContact(request):
     contacts = Contact.objects.all()
     context = {
         'contacts': contacts,
+    }
+    return render(request, template_name, context)
+
+
+class addCommandeSoja(CreateView):
+    model = CommandeSoja
+    fields = ['name', 'midname', 'firstname', 'email', 'numero', 'adress']
+    success_url = '/'
+    template_name = 'home/index.html'
+
+def showCommandeSoja(request):
+    template_name = 'dash/commandes.html'
+    commandes = CommandeSoja.objects.all()
+    context = {
+        'commandes': commandes,
     }
     return render(request, template_name, context)
 

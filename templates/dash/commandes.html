@@ -1,0 +1,50 @@
+{% extends '../home/base.html' %}
+{% block content %}
+
+    <section class="accueil">
+        <div class="container">
+            <div class="row m-0">
+                <div class="col-lg-2 mb-2">
+                    {% include './dashMenu.html' %}
+                </div>
+                <div class="col-lg-10 mb-2">
+                    {% if commandes %}
+                    <div class="d-flex align-items-center mb-2">
+                        <h3 class="text-white">Commandes</h3> &nbsp;&nbsp;
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table bg-white" style="border-radius: 10px;">
+                            <thead>
+                                <th>
+                                    <td>Nom</td>
+                                    <td>Post-nom</td>
+                                    <td>Prénom</td>
+                                    <td>Email</td>
+                                    <td>Numéro</td>
+                                    <td>Adresse</td>
+                                </th>
+                            </thead>
+                            <tbody>
+                                {% for item in commandes %}
+                                <tr>
+                                    <td></td>
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.midname}}</td>
+                                    <td>{{item.firstname}}</td>
+                                    <td>{{item.email}}</td>
+                                    <td>{{item.numero}}</td>
+                                    <td style="min-width: 20rem;">{{item.adress}}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {% else %}
+                    <h3 class="text-center text-white mb-3"><i>Aucune commande effectuée pour l'instant</i></h3>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -323,7 +323,8 @@
         <div class="container d-flex justify-content-center">
             <div class="m-3">
                 <h5>Pour participer à ce programme veuillez remplir ce formulaire</h5>
-                <form method="post" class="formbox" data-aos="zoom-out">
+                <form method="post" action="{% url 'home:addCommande' %}" class="formbox" data-aos="zoom-out">
+                    {% csrf_token %}
                     <h3>Passez votre commande</h3>
                     <div class="inputbox">
                         <label for="name">Nom : </label>

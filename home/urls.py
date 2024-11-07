@@ -37,4 +37,7 @@ urlpatterns = [
 
     path('addOffre/', views.addOffre.as_view(), name='addOffre'),
     path('showOffre/', views.showOffre, name='showOffre'),
+
+    path('addCommande/', views.addCommandeSoja.as_view(), name='addCommande'),
+    path('showCommande/', views.showCommandeSoja, name='showCommande'),
 ]
