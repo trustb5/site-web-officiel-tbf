@@ -23,7 +23,8 @@ class Domaine(models.Model):
 
 class Offre(models.Model):
     title = models.CharField(max_length=50)
-    detail = models.TextField()
+    detail = models.TextField(blank=True, null=True)
+    image = models.ImageField(upload_to="domaine/", blank=True, null=True)
     created_at = models.DateField(auto_now_add=True)
     update_at = models.DateField(auto_now=True)
 

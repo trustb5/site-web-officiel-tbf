@@ -38,7 +38,8 @@
         <div>
             <!-- <form action="{% url 'home:search' %}" method="post"> -->
                 <!-- {% csrf_token %} -->
-                <input type="search" style="font-size: 0.8rem; padding: 4px 5px;" placeholder="Rechercher"><a class="sear" href="{% url 'home:search' %}" ><i class="bi bi-search"></i></a>
+                <input type="search" style="font-size: 0.8rem; padding: 4px 5px;" placeholder="Rechercher"><a class="sear" href="#" ><i class="bi bi-search"></i></a>
+                <!-- <input type="submit" style="font-size: 0.8rem; padding: 4px 5px;" placeholder="Rechercher"><a class="sear" href="#" ><i class="bi bi-search"></i></a> -->
             <!-- </form> -->
         </div>
 
@@ -179,8 +180,8 @@
         let menuResp = document.getElementById("menu-responsive");
 
         function showMenu () {
-            menuResp.classList.toggle('hide-menu')
-            menuResp.classList.toggle('show-menu')
+            menuResp.classList.toggle('hide-menu');
+            menuResp.classList.toggle('show-menu');
         }
 
 

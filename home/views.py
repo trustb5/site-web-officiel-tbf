@@ -21,6 +21,10 @@ def About(request):
     template_name = 'home/about.html'
     return render(request, template_name)
 
+def Soja(request):
+    template_name = 'home/soja.html'
+    return render(request, template_name)
+
 def Offres(request):
     template_name = 'home/offres.html'
     offres = Offre.objects.all()
@@ -161,7 +165,7 @@ def deleteDomaine(request, pk):
 
 class addOffre(CreateView):
     model = Offre
-    fields = ['title', 'detail']
+    fields = ['title', 'detail', 'image']
     success_url = '/showOffre/'
     template_name = 'dash/addOffre.html'
 

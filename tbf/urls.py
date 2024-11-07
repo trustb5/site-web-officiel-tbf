@@ -10,7 +10,7 @@ handler500 = 'home.views.error_500'
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('secret-panel/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('', include('home.urls')),
 ]
