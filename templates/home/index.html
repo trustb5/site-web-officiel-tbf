@@ -193,7 +193,7 @@
                     <div class="sending py-5">
                         <h3 class="mb-3">Envoyez-nous un message</h3>
                         {% comment %} <form action="{% url 'home:addContact' %}" method="post" id="myForm"> {% endcomment %}
-                        <div id="myForm">
+                        <div class="myForm" id="myForm">
                             {% csrf_token %}
                             <input type="text" name="name" id="name" placeholder="Nom complet">
                             <input type="email" name="email" id="email" placeholder="Email">
@@ -258,10 +258,18 @@
             }
             emailjs.send('service_7ofec3o', 'template_rotydrv', params).then(
                 (response) => {
-                  alert('Message envoyé avec success!')
+                  alert('Message envoyé avec success!');
+                  document.getElementById('subject').value='';
+                  document.getElementById('name').value='';
+                  document.getElementById('message').value='';
+                  document.getElementById('email').value='';
                 },
                 (error) => {
-                    alert("Erreur d'envoi, réessayez!")
+                    alert("Erreur d'envoi, réessayez!");
+                    document.getElementById('subject').value='';
+                    document.getElementById('name').value='';
+                    document.getElementById('message').value='';
+                    document.getElementById('email').value='';
                 },
             );
         }

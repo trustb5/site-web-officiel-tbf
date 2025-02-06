@@ -463,13 +463,13 @@ section h1{
     color: #fff;
 }
 
-.contact .container .sending form{
+.contact .container .sending .myForm{
     display: flex;
     flex-direction: column;
 }
 
-.contact .container .sending form input,
-.contact .container .sending form textarea{
+.contact .container .sending .myForm input,
+.contact .container .sending .myForm textarea{
     margin-bottom: 30px;
     outline: none;
     background: none;
@@ -482,7 +482,7 @@ section h1{
     color: #bbb;
 }
 
-.contact .container .sending form button{
+.contact .container .sending .myForm button{
     border: none;
     border-radius: 3px;
     background-color: #FF9800;
@@ -492,7 +492,7 @@ section h1{
     padding: 8px 10px;
 }
 
-.contact .container .sending form button:hover{
+.contact .container .sending .myForm button:hover{
     background-color: #e78b00;
 }
 
