@@ -192,16 +192,14 @@
                 <div class="col-lg-6 p-0">
                     <div class="sending py-5">
                         <h3 class="mb-3">Envoyez-nous un message</h3>
-                        {% comment %} <form action="{% url 'home:addContact' %}" method="post" id="myForm"> {% endcomment %}
-                        <div class="myForm" id="myForm">
+                        <form method="post" id="myForm">
                             {% csrf_token %}
                             <input type="text" name="name" id="name" placeholder="Nom complet">
                             <input type="email" name="email" id="email" placeholder="Email">
                             <input type="text" name="subject" id="subject" placeholder="Sujet">
                             <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
-                            <button type="submit" onclick="sendMail()">Envoyer</button>
-                        </div>
-                        {% comment %} </form> {% endcomment %}
+                            <button type="button" onclick="sendMail()">Envoyer</button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-6 p-0">
@@ -247,6 +245,10 @@
                 publicKey: "DX4d2DZAGsGUHOXRs",
             });
         })();
+
+        document.getElementById('myForm').addEventListener('submit', (e)=>{
+            e.preventDefault();
+        })
 
         function sendMail(){
             let params = {
