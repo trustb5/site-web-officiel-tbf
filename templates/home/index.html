@@ -192,13 +192,16 @@
                 <div class="col-lg-6 p-0">
                     <div class="sending py-5">
                         <h3 class="mb-3">Envoyez-nous un message</h3>
-                        <form action="{% url 'home:addContact' %}" method="post" id="myForm">
+                        {% comment %} <form action="{% url 'home:addContact' %}" method="post" id="myForm"> {% endcomment %}
+                        <div id="myForm">
                             {% csrf_token %}
-                            <input type="text" name="name" id="name" placeholder="Nom">
-                            <input type="email" name="email" id="email" placeholder="email">
+                            <input type="text" name="name" id="name" placeholder="Nom complet">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <input type="text" name="subject" id="subject" placeholder="Sujet">
                             <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
-                            <button type="submit">Envoyer</button>
-                        </form>
+                            <button type="submit" onclick="sendMail()">Envoyer</button>
+                        </div>
+                        {% comment %} </form> {% endcomment %}
                     </div>
                 </div>
                 <div class="col-lg-6 p-0">
@@ -233,5 +236,35 @@
             </div>
         </div>
     </section>
+
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "DX4d2DZAGsGUHOXRs",
+            });
+        })();
+
+        function sendMail(){
+            let params = {
+                subject: document.getElementById('subject').value,
+                to_name: 'TBF',
+                from_name: document.getElementById('name').value,
+                message: document.getElementById('message').value,
+                reply_to: document.getElementById('email').value,
+            }
+            emailjs.send('service_7ofec3o', 'template_rotydrv', params).then(
+                (response) => {
+                  alert('Message envoyé avec success!')
+                },
+                (error) => {
+                    alert("Erreur d'envoi, réessayez!")
+                },
+            );
+        }
+    </script>
 
 {% endblock %}
