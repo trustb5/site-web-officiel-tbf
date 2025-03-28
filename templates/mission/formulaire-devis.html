@@ -7,26 +7,67 @@
             <!-- <h1>Santé publique</h1> -->
             <div class="row justify-content-center">
                 <div class=" col-md-9 col-lg-6 mb-3 p-2">
-                    <form method="post" class="w-100 bg-white p-3" style="border-radius: 10px;">
+                    <form method="post" id="myForm" class="w-100 bg-white p-3" style="border-radius: 10px;">
                         {% csrf_token %}
                         <h4 class="pt-2 pb-3">Demander votre devis</h4>
                         <label for="" class="d-block mb-3">
-                            <input type="text" class="form-control" placeholder="Votre nom" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
                         </label>
                         <label for="" class="d-block mb-3">
-                            <input type="email" class="form-control" placeholder="Votre email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>    
                         </label>
                         <label for="" class="d-block mb-3">
-                            <input type="text" class="form-control" placeholder="Votre numéro de téléphone" required>
+                            <input type="text" class="form-control" id="tel" name="tel" placeholder="Votre numéro de téléphone" required>
                         </label>
                         <label for="" class="d-block mb-3">
-                            <textarea name="" rows="7" class="form-control" placeholder="Détails sur le devis" required></textarea>
+                            <textarea name="" rows="7" class="form-control" id="detail" name="detail" placeholder="Détails sur le devis" required></textarea>
                         </label>
-                        <button type="submit" class="btn btn-success px-5">Envoyer</button>
+                        <button type="submit" class="btn btn-success px-5" onclick="sendMail()">Envoyer</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "DX4d2DZAGsGUHOXRs",
+            });
+        })();
+
+        document.getElementById('myForm').addEventListener('submit', (e)=>{
+            e.preventDefault();
+        })
+
+        function sendMail(){
+            let params = {
+                subject: "Demande de devis",
+                to_name: 'TBF',
+                from_name: document.getElementById('name').value+' - '+document.getElementById('tel').value,
+                message: document.getElementById('detail').value,
+                reply_to: document.getElementById('email').value,
+            }
+            emailjs.send('service_7ofec3o', 'template_rotydrv', params).then(
+                (response) => {
+                  alert('Message envoyé avec success!');
+                  document.getElementById('tel').value='';
+                  document.getElementById('name').value='';
+                  document.getElementById('detail').value='';
+                  document.getElementById('email').value='';
+                },
+                (error) => {
+                    alert("Erreur d'envoi, réessayez!");
+                    document.getElementById('tel').value='';
+                    document.getElementById('name').value='';
+                    document.getElementById('detail').value='';
+                    document.getElementById('email').value='';
+                },
+            );
+        }
+    </script>
 
 {% endblock %}
