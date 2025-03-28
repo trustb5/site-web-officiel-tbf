@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-dtns3y&7fo$8z*+s*&b4pyyd^^wc_cnz&e*b=2#e($!@2uc(be
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+# DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'trustbusinessfive.org', 'www.trustbusinessfive.org']
 # ALLOWED_HOSTS = ['*']

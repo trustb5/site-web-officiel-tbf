@@ -19,7 +19,7 @@
    
     <div class="d-none d-lg-flex justify-content-center position-absolute w-100 home-video">
         <video width="500" style="position: absolute;" controls autoplay muted loop playsinline>
-            <source src="{% static 'images/tbf_video.mp4' %}" type="video/mp4' %}">
+            <source src="{% static 'images/tbf_video.mp4' %}" type="video/mp4">
             <p>Your browser does not support the video tag.</p>
         </video>
     </div>
@@ -47,7 +47,7 @@
                     <p>
                         Avenue de la Clinique, N¨13 <br>
                         Quartier Batetela, Commune de la Gombe <br><br>
-                        <span>E-mail : infos@tbf.org</span>  
+                        <span>E-mail : trustbusinessfive@gmail.com</span>  
                     </p>
                 </div>
             </div>
@@ -134,8 +134,28 @@
         </div>
     </section>
 
-    <section class="Dirigeans">
+    <!-- <section class="Partenaire" style="background-color: #ff9800;"> -->
+    <section class="Partenaire">
         <div class="container" style="padding: 20px 0;">
+            <div class="d-flex align-items-center justify-content-center gap-3">
+                <img src="{% static 'eicher/greentech-logo.png' %}" class="logo mb-2" alt="logo">
+                <img src="{% static 'eicher/logo-eicher.svg' %}" class="logo mb-2" alt="logo">
+            </div>
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <img src="{% static 'eicher/trucks-img.webp' %}" alt="" class="img-fluid">
+                </div>
+            </div>
+            <p class="text-center">
+                email: greentech@t-online.de <br>
+                web:www.eicherwerke.com <br> <br>
+                <a href="#" style="background-color: #2e7d32; color: #fff; text-decoration: none; border-radius: 7px; padding: 7px;">En savoir plus</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="Dirigeans">
+        <div class="container" style="padding: 5%; box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.05); border-radius: 20px;">
             <h1 style="text-align: center;">L'équipe dirigeante</h1>
             <div class="row">
                 <div class="col-lg-6 mb-3">
@@ -181,7 +201,7 @@
                         </div>
                         <div class="col-md-4 mb-2 text-center">
                             <a href="mailto:trustbusinessfive@gmail.com"><i class="bi bi-envelope-fill" style="color: #2e7d32;"></i></a>
-                            <span>E-mail : infostbf@gmail.com</span>
+                            <span>E-mail : trustbusinessfive@gmail.com</span>
                         </div>
                         <div class="col-md-4 mb-2 text-center">
                             <a href="tel:+243 81 838 20 27"><i class="bi bi-telephone-fill"></i></a>
@@ -235,10 +255,10 @@
         </div>
     </section>
 
-
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+
     <script type="text/javascript">
         (function(){
             emailjs.init({

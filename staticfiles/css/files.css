@@ -683,6 +683,10 @@ section h1{
         font-family: Poppins;
         font-size: 50px;
     }
+
+    .Partenaire img {
+        width: 180px;
+    }
 }
 
 .accueil .container h1 span{
