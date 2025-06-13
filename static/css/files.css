@@ -388,7 +388,7 @@ section h1{
 
 .mission .container .content .contenu{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
